@@ -12,6 +12,12 @@
         content="Sabuz Rana - Data Analyst specializing in SQL, Python, Power BI, Business Intelligence and Big Data Analytics.">
 
     <link rel="stylesheet" href="css/style.css">
+    <link 
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+    rel="stylesheet">
+    <link 
+rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -26,41 +32,53 @@
 <header>
 
     <nav class="navbar">
-
+<!-- 
         <div class="logo">
             <a href="#">Sabuz.</a>
-        </div>
+        </div> -->
 
 
-        <ul class="nav-links">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
+       <ul class="nav-links">
 
             <li>
-                <a href="#about">About</a>
+                <a href="#home" class="nav-link">Home</a>
             </li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
 
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#about" class="nav-link">About</a>
             </li>
 
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
 
             <li>
-                <a href="#blog">Blog</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </li>
 
+
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#experience" class="nav-link">Experience</a>
             </li>
+
+
+            <li>
+                <a href="#education" class="nav-link">Education</a>
+            </li>
+
+
+            <li>
+                <a href="#projects" class="nav-link">Projects</a>
+            </li>
+
+
+            <li>
+                <a href="#blog" class="nav-link">Blog</a>
+            </li>
+
+
+            <li>
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+
 
         </ul>
 
@@ -76,51 +94,84 @@
 
 
 
-<!-- ==========================
-     Hero Section
-=========================== -->
-
 <section class="hero" id="home">
 
 
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-right">
 
 
-        <p class="hero-intro">
-            Hello, I'm
-        </p>
+        <div class="hero-intro">
+
+            <span>Hello, I am</span>
+
+            <span id="typing-text"></span>
+
+        </div>
 
 
         <h1>
             Sabuz Rana
         </h1>
 
-
-        <h2>
-            Data Analyst | Business Intelligence Specialist
-        </h2>
-
-
         <p>
-            I transform complex datasets into meaningful insights
-            using SQL, Python, Power BI, and Big Data technologies
-            to support data-driven decision making.
+
+            Detail-oriented Data Analyst specializing in SQL,
+            Python, Power BI, Business Intelligence, and Big Data Analytics.
+            I transform raw data into meaningful insights that support
+            data-driven decisions.
+
         </p>
 
 
         <div class="hero-buttons">
 
 
-            <a href="#projects" class="btn btn-primary">
-                View Projects
+            <a 
+            href="assets/resume/Sabuz_Rana_Resume.pdf"
+            download
+            class="btn btn-primary">
+
+                Download Resume
+            </a>
+
+            <a 
+            href="#contact"
+            class="btn btn-secondary">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+
+        <div class="social-links">
+
+
+            <a 
+            href="https://github.com/sabujrana"
+            target="_blank"
+            aria-label="GitHub">
+
+                <i class="fab fa-github"></i>
+
             </a>
 
 
-            <a href="assets/resume/Sabuz-Rana-Resume.pdf"
-               class="btn btn-secondary"
-               download>
+            <a 
+            href="https://www.linkedin.com/in/sabuzr/"
+            target="_blank"
+            aria-label="LinkedIn">
 
-                Download Resume
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+
+            <a 
+            href="mailto:sabujmagarsm@gmail.com"
+            aria-label="Email">
+
+                <i class="fas fa-envelope"></i>
 
             </a>
 
@@ -128,23 +179,40 @@
         </div>
 
 
-    </div>
-
-
-
-    <div class="hero-image">
-
-
-        <img src="assets/images/profile/profile.jpeg"
-             alt="Sabuz Rana">
 
 
     </div>
+
+
+    <div class="hero-image" data-aos="fade-left">
+
+
+        <img 
+        src="assets/images/profile/profile.jpeg"
+        alt="Sabuz Rana - Data Analyst">
+
+
+    </div>
+
 
 
 </section>
 
 
+<section class="about" id="about">
+
+
+<div class="section-title" data-aos="fade-up">
+
+    <h2>
+        About Me
+    </h2>
+
+    <p>
+        Turning data into meaningful business insights
+    </p>
+
+</div>
 
 
 
@@ -152,59 +220,113 @@
      About Section
 =========================== -->
 
-
-<section class="about" id="about">
-
-
-    <div class="section-title">
-
-        <h2>
-            About Me
-        </h2>
-
-    </div>
+<div class="about-container">
 
 
 
-    <div class="about-content">
+<div class="about-content" data-aos="fade-right">
 
 
-        <p>
-
-            I am a Data Analyst with a Post-Graduate Diploma in
-            Big Data Analytics from Lambton College, Canada, and a
-            Bachelor's degree in Information Technology.
-
-        </p>
+    <h3>
+    Data Analyst | Business Intelligence Developer
+    </h3>
 
 
-        <p>
 
-            My expertise includes SQL querying, Python-based analytics,
-            Power BI dashboard development, data modeling, and big data
-            technologies. I enjoy transforming raw data into actionable
-            insights that help organizations make better decisions.
-
-        </p>
-
-
-        <p>
-
-            I have experience working with business datasets,
-            developing reporting solutions, optimizing SQL workflows,
-            and creating visualization dashboards.
-
-        </p>
+    <p>
+        I am Sabuz Rana, a Data Analyst passionate about discovering
+        patterns hidden inside data and transforming them into actionable
+        business insights. With a background in Information Technology
+        and Big Data Analytics, I combine technical skills with analytical
+        thinking to solve real-world problems.
+    </p>
+    <p>
+        My experience includes working with SQL, Python, Power BI, Tableau,
+        and data visualization techniques to clean, analyze, and present
+        complex datasets in a meaningful way. I enjoy building interactive
+        dashboards, optimizing reporting workflows, and creating solutions
+        that help organizations make better decisions.
+    </p>
 
 
-    </div>
+
+    <p>
+Currently based in Mississauga, Ontario, Canada, I am continuously
+expanding my knowledge in Business Intelligence, Big Data technologies,
+and modern data analytics practices while looking for opportunities
+to contribute as a Data Analyst.
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="about-highlights" data-aos="fade-left">
+
+
+<div class="highlight-card">
+
+
+<h3>
+01
+</h3>
+
+<p>
+Strong foundation in SQL, Python & Data Analytics
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="highlight-card">
+
+
+<h3>
+02
+</h3>
+
+<p>
+Experience building dashboards and BI reports
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="highlight-card">
+
+
+<h3>
+03
+</h3>
+
+<p>
+Knowledge of Big Data ecosystem and analytics tools
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
 
 
 </section>
-
-
-
-
 
 
 <!-- ==========================
@@ -215,110 +337,157 @@
 <section class="skills" id="skills">
 
 
-<div class="section-title">
+    <div class="section-title">
 
-<h2>
-Technical Skills
-</h2>
+        <h2>Technical Skills</h2>
 
-</div>
+        <p>
+            Technologies and tools I use for data analysis and business intelligence
+        </p>
 
-
-
-
-<div class="skills-container">
-
-
-<div class="skill-card">
-
-<h3>
-Business Intelligence
-</h3>
-
-<ul>
-
-<li>Power BI</li>
-<li>Tableau</li>
-<li>Advanced Excel</li>
-<li>Data Visualization</li>
-<li>KPI Reporting</li>
-
-</ul>
-
-</div>
+    </div>
 
 
 
+    <div class="skills-container">
 
-<div class="skill-card">
 
-<h3>
-Data Analytics
-</h3>
+        <!-- BI Skills -->
 
-<ul>
+        <div class="skill-card">
 
-<li>Python</li>
-<li>SQL</li>
-<li>R</li>
-<li>Pandas</li>
-<li>NumPy</li>
-<li>Matplotlib</li>
 
-</ul>
+            <h3>
+                Business Intelligence & Visualization
+            </h3>
 
-</div>
+
+            <ul>
+
+                <li>Power BI</li>
+
+                <li>Tableau</li>
+
+                <li>Advanced Excel</li>
+
+                <li>Matplotlib</li>
+
+                <li>Dashboard Development</li>
+
+                <li>KPI Reporting</li>
+
+            </ul>
+
+
+        </div>
 
 
 
 
-<div class="skill-card">
+        <!-- Analytics Skills -->
 
-<h3>
-Big Data
-</h3>
-
-<ul>
-
-<li>Hadoop</li>
-<li>Spark</li>
-<li>Kafka</li>
-<li>Hive</li>
-<li>Impala</li>
-<li>HBase</li>
-
-</ul>
-
-</div>
+        <div class="skill-card">
 
 
+            <h3>
+                Data Analysis & Programming
+            </h3>
 
 
-<div class="skill-card">
+            <ul>
 
-<h3>
-Tools
-</h3>
+                <li>SQL (PostgreSQL, MySQL, SQL Server)</li>
 
-<ul>
+                <li>Python</li>
 
-<li>Git</li>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-<li>SQL Server</li>
-<li>ETL Pipelines</li>
+                <li>Pandas & NumPy</li>
 
-</ul>
+                <li>R Programming</li>
 
-</div>
+                <li>Data Modeling</li>
+
+                <li>Statistical Analysis</li>
+
+            </ul>
+
+
+        </div>
 
 
 
-</div>
+
+
+        <!-- Big Data -->
+
+        <div class="skill-card">
+
+
+            <h3>
+                Big Data Ecosystem
+            </h3>
+
+
+            <ul>
+
+                <li>Hadoop</li>
+
+                <li>Apache Spark</li>
+
+                <li>Kafka</li>
+
+                <li>Hive</li>
+
+                <li>Impala</li>
+
+                <li>HBase</li>
+
+                <li>Sqoop</li>
+
+            </ul>
+
+
+        </div>
+
+
+
+
+
+        <!-- Tools -->
+
+        <div class="skill-card">
+
+
+            <h3>
+                Data Engineering & Tools
+            </h3>
+
+
+            <ul>
+
+                <li>ETL Pipelines</li>
+
+                <li>Data Cleaning</li>
+
+                <li>Reporting Optimization</li>
+
+                <li>Git & GitHub</li>
+
+                <li>Database Management</li>
+
+                <li>Data Quality Validation</li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+    </div>
 
 
 </section>
-
 
 
 
@@ -333,87 +502,172 @@ Tools
 <section class="experience" id="experience">
 
 
-<div class="section-title">
+    <div class="section-title">
 
-<h2>
-Experience
-</h2>
+        <h2>Professional Experience</h2>
 
-</div>
+        <p>
+            My journey and professional contributions
+        </p>
 
-
-
-<div class="timeline">
+    </div>
 
 
 
-<div class="timeline-item">
 
-
-<div class="timeline-content">
-
-
-<span>
-Sep 2021 - Feb 2023
-</span>
-
-
-<h3>
-Junior Data Analyst
-</h3>
-
-
-<h4>
-MIG Holdings Ltd | Lalitpur, Nepal
-</h4>
+    <div class="timeline">
 
 
 
-<p>
-
-Designed and maintained data pipelines using Python and SQL,
-optimized reporting workflows, and created business intelligence
-solutions.
-
-</p>
+        <!-- Experience 1 -->
 
 
-
-<ul>
-
-<li>
-Developed SQL queries for financial datasets.
-</li>
-
-<li>
-Created 10+ BI reports using Tableau and Power BI.
-</li>
-
-<li>
-Improved reporting efficiency by 20%.
-</li>
-
-<li>
-Delivered analytical recommendations supporting business growth.
-</li>
+        <div class="timeline-item">
 
 
-</ul>
+            <div class="timeline-content">
+
+
+                <span>
+                    Sep 2021 - Feb 2023
+                </span>
+
+
+                <h3>
+                    Junior Data Analyst
+                </h3>
+
+
+                <h4>
+                    MIG Holdings Ltd | Lalitpur, Nepal
+                </h4>
 
 
 
-</div>
+                <ul>
 
 
-</div>
+                    <li>
+                        Designed and maintained data pipelines
+                        using Python and SQL to support analytical
+                        reporting workflows.
+                    </li>
+
+
+                    <li>
+                        Developed and optimized SQL queries to
+                        extract, clean, and validate multi-source
+                        financial datasets.
+                    </li>
+
+
+                    <li>
+                        Created interactive dashboards using
+                        Power BI and Tableau to track business
+                        performance metrics.
+                    </li>
+
+
+                    <li>
+                        Delivered 10+ BI reports with actionable
+                        insights that supported data-driven
+                        decision making.
+                    </li>
+
+
+                    <li>
+                        Collaborated with cross-functional teams
+                        to improve reporting efficiency and
+                        data accuracy.
+                    </li>
 
 
 
-</div>
+                </ul>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Experience 2 -->
+
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-content">
+
+
+                <span>
+                    Canada
+                </span>
+
+
+                <h3>
+                    Building Superintendent
+                </h3>
+
+
+                <h4>
+                    Residential Property Management
+                </h4>
+
+
+
+                <ul>
+
+
+                    <li>
+                        Managed daily building operations,
+                        maintenance requests, and tenant services.
+                    </li>
+
+
+                    <li>
+                        Coordinated with contractors for repairs,
+                        inspections, and preventive maintenance.
+                    </li>
+
+
+                    <li>
+                        Maintained records, tracked service requests,
+                        and ensured operational compliance.
+                    </li>
+
+
+                    <li>
+                        Developed strong problem-solving and
+                        communication skills while working with
+                        diverse teams.
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
 
 
 </section>
-
 
 
 
@@ -425,247 +679,145 @@ Delivered analytical recommendations supporting business growth.
 =========================== -->
 
 
-<section class="education">
+<section class="education" id="education">
 
 
-<div class="section-title">
+    <div class="section-title">
 
-<h2>
-Education
-</h2>
+        <h2>Education</h2>
 
-</div>
+        <p>
+            My academic background and qualifications
+        </p>
 
-
-
-<div class="education-container">
-
-
-<div class="education-card">
-
-
-<h3>
-Post-Graduate Diploma
-</h3>
-
-
-<h4>
-Big Data Analytics
-</h4>
-
-
-<p>
-Lambton College, Mississauga, Ontario
-</p>
-
-
-<span>
-May 2023 - Dec 2024
-</span>
-
-
-</div>
+    </div>
 
 
 
 
-
-<div class="education-card">
-
-
-<h3>
-Bachelor of Engineering
-</h3>
+    <div class="education-container">
 
 
-<h4>
-Information Technology
-</h4>
+
+        <!-- Education Card 1 -->
 
 
-<p>
-Nepal College of Information Technology (NCIT)
-</p>
+        <div class="education-card">
 
 
-<span>
-Sep 2016 - Aug 2021
-</span>
+            <span>
+                May 2023 - Dec 2024
+            </span>
 
 
-</div>
+            <h3>
+                Post-Graduate Diploma
+            </h3>
 
 
-</div>
+            <h4>
+                Big Data Analytics
+            </h4>
+
+
+            <p>
+                Lambton College
+            </p>
+
+
+            <p>
+                Mississauga, Ontario, Canada
+            </p>
+
+
+            <p>
+                Focused on Big Data technologies,
+                data analytics, Hadoop ecosystem,
+                Python, SQL, and business intelligence.
+            </p>
+
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Education Card 2 -->
+
+
+        <div class="education-card">
+
+
+            <span>
+                Sep 2016 - Aug 2021
+            </span>
+
+
+            <h3>
+                Bachelor of Engineering
+            </h3>
+
+
+            <h4>
+                Information Technology
+            </h4>
+
+
+            <p>
+                Nepal College of Information Technology (NCIT)
+            </p>
+
+
+            <p>
+                Kathmandu, Nepal
+            </p>
+
+
+            <p>
+                Built strong foundations in programming,
+                databases, software development, and
+                information technology systems.
+            </p>
+
+
+
+        </div>
+
+
+
+
+    </div>
 
 
 </section>
-
-
-
-
-
 
 
 <!-- ==========================
-     Projects Section
+     Project Section
 =========================== -->
-
 
 <section class="projects" id="projects">
 
+    <div class="section-title">
 
-<div class="section-title">
+        <h2>Projects</h2>
 
-<h2>
-Featured Projects
-</h2>
+        <p>
+            My Data Analytics Projects
+        </p>
 
+    </div>
 
-</div>
 
+    <div class="projects-container" id="projects-container">
 
-
-
-<div class="projects-container">
-
-
-
-<div class="project-card">
-
-
-<img src="assets/images/projects/powerbi/chart3.png"
-alt="Power BI Dashboard">
-
-
-<h3>
-Power BI Interactive Analytics Dashboard
-</h3>
-
-
-<p>
-
-Designed interactive dashboards using KPI summaries,
-dynamic visualizations, and SQL-based data preparation.
-
-</p>
-
-
-<div class="project-tech">
-
-<span>
-Power BI
-</span>
-
-<span>
-SQL
-</span>
-
-<span>
-Data Modeling
-</span>
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="project-card">
-
-
-<img src="assets/images/projects/bigdata/cover_for_big_data_vis.png"
-alt="Big Data Visualization">
-
-
-<h3>
-Big Data Visualization for Business Communications
-</h3>
-
-
-<p>
-
-Transformed complex datasets into executive-level insights
-using data cleaning and visualization techniques.
-
-</p>
-
-
-<div class="project-tech">
-
-<span>
-Python
-</span>
-
-<span>
-Big Data
-</span>
-
-<span>
-Visualization
-</span>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="project-card">
-
-
-<img src="assets/images/projects/analytics/IGindividualcover_0sCiPRL.png"
-alt="Data Analysis Project">
-
-
-<h3>
-Data Analysis & Insights Project
-</h3>
-
-
-<p>
-
-Performed exploratory data analysis, feature validation,
-and analytical modeling for business problems.
-
-</p>
-
-
-<div class="project-tech">
-
-<span>
-Python
-</span>
-
-<span>
-Pandas
-</span>
-
-<span>
-EDA
-</span>
-
-</div>
-
-
-</div>
-
-
-
-</div>
+    </div>
 
 
 </section>
-
-
 
 
 
@@ -679,11 +831,17 @@ EDA
 <section class="blog" id="blog">
 
 
-<div class="section-title">
+<div class="section-title" data-aos="fade-up">
+
 
 <h2>
-Latest Articles
+Latest Insights
 </h2>
+
+
+<p>
+My learning journey and analytics knowledge sharing
+</p>
 
 
 </div>
@@ -693,59 +851,126 @@ Latest Articles
 <div class="blog-container">
 
 
+<div class="blog-card" data-aos="fade-up">
 
-<div class="blog-card">
 
-<h3>
-SQL Queries Every Data Analyst Should Know
-</h3>
+<div class="blog-icon">
 
-<p>
-Learning essential SQL concepts for analytics roles.
-</p>
+<i class="fa-solid fa-database"></i>
 
 </div>
 
 
 
-<div class="blog-card">
-
 <h3>
-Building My First Power BI Dashboard
+SQL for Data Analysts
 </h3>
 
-<p>
-My process of transforming raw data into insights.
-</p>
 
-</div>
-
-
-
-
-<div class="blog-card">
-
-<h3>
-Data Cleaning Using Python Pandas
-</h3>
 
 <p>
-Practical techniques for preparing datasets.
+
+Exploring SQL queries, joins, aggregations,
+and optimization techniques used in real-world
+data analysis.
+
 </p>
 
 
+
+<a href="#" class="blog-btn">
+
+Read More →
+
+</a>
+
+
 </div>
 
 
 
+<div class="blog-card" data-aos="fade-up">
+
+
+<div class="blog-icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
 </div>
+
+
+
+<h3>
+Building Power BI Dashboards
+</h3>
+
+
+
+<p>
+
+My approach to transforming raw datasets into
+interactive dashboards with KPIs and business insights.
+
+</p>
+
+
+
+<a href="#" class="blog-btn">
+
+Read More →
+
+</a>
+
+
+</div>
+
+
+
+<div class="blog-card" data-aos="fade-up">
+
+
+<div class="blog-icon">
+
+<i class="fa-brands fa-python"></i>
+
+</div>
+
+
+
+<h3>
+Data Cleaning with Python
+</h3>
+
+
+
+<p>
+
+Techniques for handling missing values,
+data transformation, and preparing datasets
+for analysis.
+
+</p>
+
+
+
+<a href="#" class="blog-btn">
+
+Read More →
+
+</a>
+
+
+</div>
+
+
+
+
+
+</div>
+
 
 
 </section>
-
-
-
-
 
 
 
@@ -757,58 +982,262 @@ Practical techniques for preparing datasets.
 <section class="contact" id="contact">
 
 
-<div class="section-title">
+<div class="contact-wrapper" data-aos="fade-up">
+
+
+<div class="contact-text">
+
 
 <h2>
-Contact Me
+Let's Work Together
 </h2>
+
+
+<p>
+
+I am always interested in connecting with
+professionals, recruiters, and organizations
+looking for Data Analytics and Business
+Intelligence solutions.
+
+</p>
+
+
+<p>
+
+Feel free to reach out through any of the
+platforms below.
+
+</p>
+
 
 </div>
 
 
 
-<p>
-Mississauga, Ontario, Canada
-</p>
 
 
-<p>
-Email:
+
+<div class="contact-links">
+
+
+<a 
+href="mailto:sabujmagarsm@gmail.com"
+class="contact-item">
+
+
+<i class="fa-solid fa-envelope"></i>
+
+
+<div>
+
+<h3>Email</h3>
+
+<span>
 sabujmagarsm@gmail.com
-</p>
+</span>
+
+</div>
 
 
-<p>
-GitHub:
+</a>
+
+
+
+
+
+
+
+<a 
+href="https://github.com/sabujrana"
+target="_blank"
+class="contact-item">
+
+
+<i class="fa-brands fa-github"></i>
+
+
+<div>
+
+<h3>GitHub</h3>
+
+<span>
 github.com/sabujrana
-</p>
+</span>
+
+</div>
+
+
+</a>
+
+
+<a 
+href="https://www.linkedin.com/in/sabuzr/"
+target="_blank"
+class="contact-item">
+
+
+<i class="fa-brands fa-linkedin"></i>
+
+
+<div>
+
+<h3>LinkedIn</h3>
+
+<span>
+linkedin.com/in/sabuzr
+</span>
+
+</div>
+
+
+</a>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Mississauga+Ontario+Canada"
+target="_blank"
+class="contact-item">
+
+
+<i class="fa-solid fa-location-dot"></i>
+
+
+<div>
+
+<h3>
+Location
+</h3>
+
+<span>
+Mississauga, Ontario, Canada
+</span>
+
+</div>
+
+
+</a>
+
+
+</div>
+
 
 
 </section>
 
 
 
-</main>
-
-
-
-
+<!-- ==========================
+     Footer Section
+=========================== -->
 
 
 <footer>
+
+
+<div class="footer-container">
+
+
+<div class="footer-content">
+
+
+<h3>
+Sabuz Rana
+</h3>
+
+
+<p>
+Data Analyst | Business Intelligence Enthusiast
+</p>
+
+
+</div>
+
+
+
+<div class="footer-social">
+
+<a 
+href="https://github.com/sabujrana"
+target="_blank">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+
+<a 
+href="https://www.linkedin.com/in/sabuzr/"
+target="_blank">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+
+<a 
+href="mailto:sabujmagarsm@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="footer-bottom">
+
 
 <p>
 © 2026 Sabuz Rana. All Rights Reserved.
 </p>
 
 
+<p>
+Built with HTML, CSS & JavaScript
+</p>
+
+
+</div>
+
+
 </footer>
 
 
+<!-- JavaScript Files -->
 
+
+<script src="js/projects.js"></script>
 
 <script src="js/main.js"></script>
 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+
+AOS.init({
+
+    duration:1000,
+
+    once:true
+
+});
+
+</script>
+
+
+</body>
+
+</html>
 
 </body>
 

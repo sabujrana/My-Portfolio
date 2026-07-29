@@ -1,254 +1,302 @@
 // ==========================
-// Check JavaScript Loading
+// Initialize AOS Animation
 // ==========================
 
-console.log("MAIN JS WORKING");
+if (typeof AOS !== "undefined") {
+
+    AOS.init({
+
+        duration: 1000,
+
+        once: true,
+
+        offset: 100
+
+    });
+
+}
+
+
 
 
 
 // ==========================
-// Scroll Reveal Animation
+// Load Projects Dynamically
 // ==========================
 
 
-const revealElements = document.querySelectorAll(
-    ".about, .skills, .experience, .education, .projects, .blog, .contact, .skill-card, .project-card, .education-card, .blog-card, .timeline-item"
+const projectContainer = document.getElementById(
+    "projects-container"
 );
 
 
 
-const observer = new IntersectionObserver(
-    (entries) => {
+if (projectContainer && typeof projects !== "undefined") {
 
 
-        entries.forEach((entry) => {
+    projects.forEach(project => {
 
 
-            if(entry.isIntersecting){
+        const projectCard = document.createElement("div");
 
 
-                entry.target.classList.add("show");
+        projectCard.classList.add(
+    "project-card"
+);
 
 
-                observer.unobserve(entry.target);
-
-
-            }
-
-
-        });
-
-
-    },
-    {
-
-        threshold: 0.15
-
-    }
-
+projectCard.setAttribute(
+    "data-aos",
+    "fade-up"
 );
 
 
 
+        projectCard.innerHTML = `
 
-revealElements.forEach((element)=>{
 
+            <img 
+            src="${project.cover}"
+            alt="${project.title}">
 
-    element.classList.add("hidden");
 
 
-    observer.observe(element);
+            <div class="project-content">
 
 
-});
+                <h3>
+                    ${project.title}
+                </h3>
 
 
 
+                <p>
+                    ${project.description}
+                </p>
 
 
 
 
-// ==========================
-// Navbar Shadow On Scroll
-// ==========================
+                <div class="project-tech">
 
 
-const navbar = document.querySelector(".navbar");
+                    ${project.technologies.map(tech =>
 
+                        `<span>${tech}</span>`
 
+                    ).join("")}
 
-window.addEventListener("scroll",()=>{
 
 
-    if(window.scrollY > 50){
+                </div>
 
 
-        navbar.style.boxShadow =
-        "0 5px 20px rgba(0,0,0,0.12)";
 
 
-    }
-    else{
 
+                <a 
+                href="./project-details.html?id=${project.id}"
+                class="project-btn">
 
-        navbar.style.boxShadow =
-        "0 2px 10px rgba(0,0,0,0.05)";
+                View Details
 
+                </a>
 
-    }
 
 
-});
+            </div>
 
 
 
+        `;
 
 
 
+        projectContainer.appendChild(projectCard);
 
-// ==========================
-// Active Navbar Link
-// ==========================
-
-
-const sections =
-document.querySelectorAll("section");
-
-
-const navLinks =
-document.querySelectorAll(".nav-links a");
-
-
-
-
-window.addEventListener("scroll",()=>{
-
-
-    let current = "";
-
-
-
-    sections.forEach((section)=>{
-
-
-        const sectionTop =
-        section.offsetTop - 150;
-
-
-
-        if(window.scrollY >= sectionTop){
-
-
-            current =
-            section.getAttribute("id");
-
-
-        }
-
-
-    });
-
-
-
-    navLinks.forEach((link)=>{
-
-
-        link.classList.remove("active");
-
-
-
-        if(link.getAttribute("href")
-        === "#" + current){
-
-
-            link.classList.add("active");
-
-
-        }
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-
-// ==========================
-// Smooth Scrolling
-// ==========================
-
-
-navLinks.forEach((link)=>{
-
-
-    link.addEventListener("click",(e)=>{
-
-
-        const target =
-        document.querySelector(
-            link.getAttribute("href")
-        );
-
-
-        if(target){
-
-
-            e.preventDefault();
-
-
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-
-        }
-
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-
-// ==========================
-// Mobile Menu Preparation
-// ==========================
-
-
-const menuButton =
-document.querySelector(".menu-btn");
-
-
-const navMenu =
-document.querySelector(".nav-links");
-
-
-
-if(menuButton){
-
-
-    menuButton.addEventListener("click",()=>{
-
-
-        navMenu.classList.toggle("active");
 
 
     });
 
 
 }
+
+
+
+// ==========================
+// Hero Typing Effect
+// ==========================
+
+
+const typingText = document.getElementById(
+    "typing-text"
+);
+
+
+
+if(typingText){
+
+
+const roles = [
+
+    "Data Analyst",
+
+    "Business Intelligence Developer",
+
+    "Big Data Enthusiast",
+
+    "Python & SQL Developer"
+
+];
+
+
+let roleIndex = 0;
+
+let charIndex = 0;
+
+let deleting = false;
+
+
+
+function typeEffect(){
+
+
+
+let currentRole =
+roles[roleIndex];
+
+
+
+if(!deleting){
+
+
+typingText.textContent =
+currentRole.substring(
+0,
+charIndex++
+);
+
+
+if(charIndex > currentRole.length){
+
+
+deleting=true;
+
+
+setTimeout(
+typeEffect,
+1200
+);
+
+
+return;
+
+}
+
+
+
+}
+else{
+
+
+typingText.textContent =
+currentRole.substring(
+0,
+charIndex--
+);
+
+
+
+if(charIndex === 0){
+
+
+deleting=false;
+
+
+roleIndex =
+(roleIndex + 1)
+% roles.length;
+
+
+}
+
+
+}
+
+
+
+setTimeout(
+typeEffect,
+deleting ? 60 : 100
+);
+
+
+
+}
+
+
+
+typeEffect();
+
+
+}
+
+// ==========================
+// Active Navbar On Scroll
+// ==========================
+
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+
+
+window.addEventListener("scroll", ()=>{
+
+
+let current = "";
+
+
+
+sections.forEach(section=>{
+
+
+const sectionTop = section.offsetTop - 150;
+
+const sectionHeight = section.clientHeight;
+
+
+
+if(window.scrollY >= sectionTop && 
+window.scrollY < sectionTop + sectionHeight){
+
+    current = section.getAttribute("id");
+
+}
+
+
+});
+
+
+
+
+navLinks.forEach(link=>{
+
+
+link.classList.remove("active");
+
+
+if(link.getAttribute("href") === "#" + current){
+
+    link.classList.add("active");
+
+}
+
+
+});
+
+
+});
+
+
