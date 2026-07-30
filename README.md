@@ -145,13 +145,13 @@ To run the portfolio locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/sabujrana/My-Portfolio.git
 ```
 
 ### 2. Open the project
 
 ```bash
-cd YOUR_REPOSITORY
+cd My-Portfolio
 ```
 
 ### 3. Open the website
