@@ -1689,79 +1689,96 @@ section {
 
 .education {
 
-    background:var(--light);
+    background: var(--light);
 
 }
 
 
+/* Education Layout */
 
 .education-container {
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:35px;
+    gap:30px;
 
-    max-width:1000px;
+    max-width:1150px;
 
     margin:auto;
 
 }
 
 
+/* Education Card */
 
 .education-card {
 
-    background:white;
+    background:#ffffff;
 
-    padding:40px;
+    padding:32px;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    box-shadow:var(--shadow);
+    border:1px solid #e5e7eb;
 
-    transition:0.3s;
+    box-shadow:
+    0 10px 30px rgba(15,23,42,0.08);
+
+    transition:all 0.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
 
 }
 
 
+/* Top accent line */
+
+.education-card::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--primary);
+
+}
+
+
+/* Hover */
 
 .education-card:hover {
 
     transform:translateY(-8px);
 
+    box-shadow:
+    0 18px 40px rgba(15,23,42,0.12);
+
 }
 
 
+/* Duration */
 
 .education-card span {
 
+    display:inline-block;
+
     color:var(--primary);
+
+    font-size:14px;
 
     font-weight:700;
-
-}
-
-
-
-.education-card h3 {
-
-    font-size:28px;
-
-    color:var(--dark);
-
-    margin:15px 0 5px;
-
-}
-
-
-
-.education-card h4 {
-
-    color:var(--primary);
-
-    font-size:20px;
 
     margin-bottom:15px;
 
@@ -1769,17 +1786,82 @@ section {
 
 
 
-.education-card p {
+/* Degree */
 
-    color:var(--gray);
+.education-card h3 {
 
-    margin-bottom:10px;
+    font-size:24px;
+
+    line-height:1.3;
+
+    color:var(--dark);
+
+    margin:10px 0 8px;
 
 }
 
 
 
-@media(max-width:800px){
+/* Institution */
+
+.education-card h4 {
+
+    color:var(--primary);
+
+    font-size:17px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* Description */
+
+.education-card p {
+
+    color:var(--gray);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Highlight values like CGPA */
+
+.education-card strong {
+
+    color:var(--dark);
+
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+
+
+@media(max-width:1000px){
+
+
+.education-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
 
 
 .education-container{
@@ -4049,4 +4131,371 @@ html {
 
 section {
     scroll-margin-top: 90px;
+}
+
+/* =========================================================
+   SECTION COLORS
+   HOME / HERO IS NOT TOUCHED
+========================================================= */
+
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about {
+    background: #eef4ff;
+    color: #475569;
+}
+
+.about .section-title h2,
+.about-story h3,
+.details-title h3,
+.strength-item h4 {
+    color: #0f172a !important;
+}
+
+.about .section-title p,
+.about-story p,
+.strength-item p,
+.detail-label {
+    color: #64748b !important;
+}
+
+
+/* ==========================
+   PERSONAL DETAILS
+========================== */
+
+.personal-details,
+.strength-item {
+    background: #ffffff;
+
+    border: 1px solid #dbe5f2;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.08);
+}
+
+.details-title {
+    border-bottom: 1px solid #e5edf7;
+}
+
+.details-title i,
+.detail-label i,
+.detail-row a,
+.strength-number {
+    color: var(--primary);
+}
+
+.detail-row {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.detail-row strong {
+    color: #0f172a;
+}
+
+
+/* ==========================
+   EDUCATION
+========================== */
+
+.education {
+    background: #e8f0fc;
+    color: #475569;
+}
+
+.education .section-title h2,
+.education h3,
+.education h4,
+.education h5 {
+    color: #0f172a !important;
+}
+
+.education .section-title p,
+.education p,
+.education-card small,
+.education-card span {
+    color: #64748b !important;
+}
+
+.education-card {
+    background: #ffffff;
+
+    border: 1px solid #d6e2f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.07);
+}
+
+.education-date {
+    color: var(--primary);
+}
+
+
+/* ==========================
+   PROFESSIONAL EXPERIENCE
+========================== */
+
+.experience,
+.professional-experience {
+    background: #dfeafb;
+    color: #475569;
+}
+
+.experience .section-title h2,
+.professional-experience .section-title h2,
+.experience h3,
+.experience h4,
+.experience h5,
+.professional-experience h3,
+.professional-experience h4,
+.professional-experience h5 {
+    color: #0f172a !important;
+}
+
+.experience .section-title p,
+.professional-experience .section-title p,
+.experience p,
+.professional-experience p {
+    color: #64748b !important;
+}
+
+.experience-card,
+.experience-item,
+.timeline-item {
+    background: #ffffff;
+
+    border: 1px solid #d2deef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.08);
+}
+
+.experience-date,
+.timeline-date {
+    color: var(--primary);
+}
+
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skills {
+    background: #eef4ff;
+    color: #475569;
+}
+
+.skills .section-title h2,
+.skills h3,
+.skills h4,
+.skills h5 {
+    color: #0f172a !important;
+}
+
+.skills .section-title p,
+.skills p {
+    color: #64748b !important;
+}
+
+.skill-card {
+    background: #ffffff;
+
+    border: 1px solid #dbe5f2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.07);
+}
+
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.projects {
+    background: #e8f0fc;
+    color: #475569;
+}
+
+.projects .section-title h2,
+.projects h3,
+.projects h4,
+.projects h5 {
+    color: #0f172a !important;
+}
+
+.projects .section-title p,
+.projects p {
+    color: #64748b !important;
+}
+
+.project-card {
+    background: #ffffff;
+
+    border: 1px solid #d6e2f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.07);
+}
+
+
+/* ==========================
+   LATEST INSIGHTS
+========================== */
+
+.blog,
+.latest-insights {
+    background: #dfeafb;
+    color: #475569;
+}
+
+.blog .section-title h2,
+.latest-insights .section-title h2,
+.blog h3,
+.blog h4,
+.latest-insights h3,
+.latest-insights h4 {
+    color: #0f172a !important;
+}
+
+.blog .section-title p,
+.latest-insights .section-title p,
+.blog p,
+.latest-insights p {
+    color: #64748b !important;
+}
+
+.blog-card {
+    background: #ffffff;
+
+    border: 1px solid #d2deef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.08);
+}
+
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact {
+    background: #e8f0fc;
+    color: #475569;
+}
+
+.contact .section-title h2,
+.contact-info h3 {
+    color: #0f172a !important;
+}
+
+.contact .section-title p,
+.contact-info > p {
+    color: #64748b !important;
+}
+
+.contact-label {
+    color: var(--primary);
+}
+
+
+/* Contact details */
+
+.contact-detail span {
+    color: #94a3b8;
+}
+
+.contact-detail strong {
+    color: #0f172a;
+}
+
+.contact-detail a {
+    color: var(--primary);
+}
+
+
+/* Contact form */
+
+.contact-form-card {
+    background: #ffffff;
+
+    border: 1px solid #d6e2f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(30, 64, 175, 0.08);
+}
+
+.form-group label {
+    color: #0f172a;
+}
+
+.form-group input,
+.form-group textarea {
+    color: #0f172a;
+
+    background: #f8fbff;
+
+    border: 1px solid #d6e2f0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+.contact-submit {
+    background: var(--primary);
+
+    color: #ffffff;
+}
+
+
+/* ==========================
+   FOOTER
+   Keep this consistent with
+   your dark navbar
+========================== */
+
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+.footer-content h3 {
+    color: #ffffff;
+}
+
+.footer-content p {
+    color: #94a3b8;
+}
+
+.footer-bottom {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    color: #64748b;
 }
