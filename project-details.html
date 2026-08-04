@@ -1,276 +1,293 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <title>Project Details | Sabuz Rana</title>
 
-<title>
-Project Details | Sabuz Rana
-</title>
+    <meta
+        name="description"
+        content="Project details and screenshots by Sabuz Rana."
+    >
 
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
-<link rel="stylesheet" href="css/style.css">
-
-
-<link 
-href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
-rel="stylesheet">
-
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
 
 </head>
-
 
 
 <body>
 
 
-<!-- Navbar -->
+<!-- ==========================
+     Navigation
+========================== -->
 
 <header>
 
-<nav class="navbar">
+    <nav class="navbar">
 
+        <ul class="nav-links">
 
-<ul class="nav-links">
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
 
+            <li>
+                <a href="index.html#about">
+                    About
+                </a>
+            </li>
 
-<li>
-<a href="index.html">
-Home
-</a>
-</li>
+            <li>
+                <a href="index.html#skills">
+                    Skills
+                </a>
+            </li>
 
+            <li>
+                <a href="index.html#projects">
+                    Projects
+                </a>
+            </li>
 
-<li>
-<a href="index.html#projects">
-Projects
-</a>
-</li>
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
 
+        </ul>
 
-<li>
-<a href="index.html#contact">
-Contact
-</a>
-</li>
-
-
-</ul>
-
-
-</nav>
-
+    </nav>
 
 </header>
 
 
-
-
+<!-- ==========================
+     Project Details
+========================== -->
 
 <main>
 
+    <section class="project-details-page">
 
 
-<section class="project-detail-page">
+        <!-- Back Button -->
 
+        <div class="project-back">
 
+            <a href="index.html#projects">
 
-<a href="index.html#projects" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
 
-← Back to Projects
+                Back to Projects
 
-</a>
+            </a>
 
+        </div>
 
 
+        <!-- Project Header -->
 
+        <div
+            class="project-details-header"
+            id="project-details-header"
+        >
 
-<!-- Project Header -->
+            <h1 id="project-title">
+                Loading Project...
+            </h1>
 
+            <p id="project-description">
+                Loading project details...
+            </p>
 
-<div class="project-header" data-aos="fade-up">
+        </div>
 
 
-<h1 id="project-title">
+        <!-- Project Technologies -->
 
-</h1>
+        <div
+            class="project-technologies"
+            id="project-technologies"
+        >
+        </div>
 
 
-<p id="project-description">
+        <!-- Project Images -->
 
-</p>
+        <div
+            class="project-gallery"
+            id="project-gallery"
+        >
+        </div>
 
 
-</div>
+        <!-- GitHub -->
 
+        <div
+            class="project-github"
+            id="project-github"
+        >
+        </div>
 
 
-
-
-
-
-<!-- Cover Image -->
-
-
-<div class="project-main-image" data-aos="zoom-in">
-
-
-<img 
-id="project-cover-image"
-src=""
-alt="">
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Overview -->
-
-
-<div class="project-overview" data-aos="fade-up">
-
-
-<h2>
-Project Overview
-</h2>
-
-
-<p id="project-overview">
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- Technology -->
-
-<div class="project-technologies" data-aos="fade-up">
-
-
-<h2>
-Technologies Used
-</h2>
-
-
-<div 
-class="project-tech"
-id="project-technologies">
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Gallery -->
-
-
-<div class="project-gallery-section">
-
-
-<h2>
-Project Screenshots
-</h2>
-
-
-
-<div 
-class="project-gallery"
-id="project-gallery">
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Github -->
-
-<div class="project-action" data-aos="fade-up">
-
-
-<a 
-id="github-link"
-target="_blank"
-class="btn btn-primary">
-
-
-View GitHub Repository
-
-
-</a>
-
-
-</div>
-
-
-
-
-</section>
-
-
+    </section>
 
 </main>
 
 
 
+<!-- ==========================
+     Image Lightbox
+========================== -->
 
+<div
+    class="image-lightbox"
+    id="image-lightbox"
+    aria-hidden="true"
+>
+
+
+    <!-- Close -->
+
+    <button
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Close image preview"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <!-- Previous -->
+
+    <button
+        class="lightbox-prev"
+        id="lightbox-prev"
+        aria-label="Previous image"
+    >
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+    </button>
+
+
+    <!-- Image Area -->
+
+    <div class="lightbox-content">
+
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt="Project preview"
+        >
+
+
+        <div class="lightbox-counter">
+
+            <span id="lightbox-current">
+                1
+            </span>
+
+            /
+
+            <span id="lightbox-total">
+                1
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Next -->
+
+    <button
+        class="lightbox-next"
+        id="lightbox-next"
+        aria-label="Next image"
+    >
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+
+    <!-- Zoom Controls -->
+
+    <div class="lightbox-controls">
+
+
+        <button
+            id="zoom-out"
+            aria-label="Zoom out"
+        >
+
+            <i class="fa-solid fa-minus"></i>
+
+        </button>
+
+
+        <button
+            id="zoom-reset"
+            aria-label="Reset zoom"
+        >
+
+            <i class="fa-solid fa-expand"></i>
+
+        </button>
+
+
+        <button
+            id="zoom-in"
+            aria-label="Zoom in"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================
+     JavaScript
+========================== -->
 
 <script src="js/projects.js"></script>
-
 
 <script src="js/project-details.js"></script>
 
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-
-<script>
-
-AOS.init({
-
-duration:1000,
-
-once:true
-
-});
-
-
-</script>
-
-
-
 </body>
-
 
 </html>

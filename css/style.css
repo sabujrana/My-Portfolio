@@ -4493,3 +4493,693 @@ footer {
 .footer-bottom p {
     color: #64748b;
 }
+
+/* ==================================================
+   PROJECT DETAILS PAGE
+================================================== */
+
+
+/* ==========================
+   Page
+========================== */
+
+.project-details-page {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 120px 6% 80px;
+
+}
+
+
+/* ==========================
+   Back Button
+========================== */
+
+.project-back {
+
+    margin-bottom: 35px;
+
+}
+
+
+.project-back a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.project-back a:hover {
+
+    transform: translateX(-5px);
+
+}
+
+
+/* ==========================
+   Project Header
+========================== */
+
+.project-details-header {
+
+    max-width: 850px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.project-details-header h1 {
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+    color: var(--dark);
+
+}
+
+
+.project-details-header p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: var(--gray);
+
+}
+
+
+/* ==========================
+   Technologies
+========================== */
+
+.project-technologies {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.project-tech {
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(37, 99, 235, 0.1);
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================
+   Project Gallery
+========================== */
+
+.project-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+}
+
+
+/* ==========================
+   Gallery Item
+========================== */
+
+.project-gallery-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+    cursor: pointer;
+
+    aspect-ratio: 16 / 10;
+
+}
+
+
+.project-gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.project-gallery-item:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==========================
+   Gallery Overlay
+========================== */
+
+.gallery-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+
+}
+
+
+.project-gallery-item:hover
+.gallery-overlay {
+
+    opacity: 1;
+
+}
+
+
+.gallery-overlay i {
+
+    font-size: 28px;
+
+}
+
+
+.gallery-overlay span {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================
+   GitHub Button
+========================== */
+
+.project-github {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+
+}
+
+
+.project-github-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.project-github-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+
+}
+
+
+/* ==================================================
+   IMAGE LIGHTBOX
+================================================== */
+
+.image-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.image-lightbox.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* Prevent page scrolling */
+
+body.lightbox-open {
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================
+   Lightbox Content
+========================== */
+
+.lightbox-content {
+
+    position: relative;
+
+    width: 80vw;
+
+    height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.lightbox-content img {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    cursor: grab;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.lightbox-content img:active {
+
+    cursor: grabbing;
+
+}
+
+
+/* ==========================
+   Close Button
+========================== */
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+
+}
+
+
+.lightbox-close:hover {
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* ==========================
+   Previous / Next
+========================== */
+
+.lightbox-prev,
+.lightbox-next {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s ease;
+
+    z-index: 10;
+
+}
+
+
+.lightbox-prev {
+
+    left: 25px;
+
+}
+
+
+.lightbox-next {
+
+    right: 25px;
+
+}
+
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    transform:
+        translateY(-50%) scale(1.08);
+
+}
+
+
+/* ==========================
+   Counter
+========================== */
+
+.lightbox-counter {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    z-index: 10;
+
+}
+
+
+/* ==========================
+   Zoom Controls
+========================== */
+
+.lightbox-controls {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    right: 30px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 10;
+
+}
+
+
+.lightbox-controls button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.lightbox-controls button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 800px) {
+
+    .project-details-page {
+
+        padding: 100px 5% 60px;
+
+    }
+
+
+    .project-details-header h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .project-gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .lightbox-content {
+
+        width: 90vw;
+
+        height: 75vh;
+
+    }
+
+
+    .lightbox-prev {
+
+        left: 10px;
+
+    }
+
+
+    .lightbox-next {
+
+        right: 10px;
+
+    }
+
+
+    .lightbox-close {
+
+        top: 15px;
+
+        right: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .project-details-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .project-details-header p {
+
+        font-size: 16px;
+
+    }
+
+
+    .lightbox-prev,
+    .lightbox-next {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .lightbox-controls {
+
+        bottom: 15px;
+
+        right: 15px;
+
+    }
+
+}
